@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+# 让 pytest 能导入项目根目录下的 app.py
+pythonpath = ["."]
+testpaths = ["tests"]

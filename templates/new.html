@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>新建工单 - CampusFix</title>
+  <style>
+    body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+    label { display: block; margin: 0.8rem 0 0.2rem; font-weight: 600; }
+    input, textarea { width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 6px; font-size: 1rem; box-sizing: border-box; }
+    textarea { min-height: 120px; }
+    button { margin-top: 1rem; padding: 0.5rem 1.5rem; background: #1a73e8; color: #fff; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <p><a href="{{ url_for('index') }}">← 返回列表</a></p>
+  <h1>新建报修工单</h1>
+  <form method="post">
+    <label for="title">标题</label>
+    <input id="title" name="title" placeholder="例如：教室投影仪无法开机">
+    <label for="room">位置</label>
+    <input id="room" name="room" placeholder="例如：A区301">
+    <label for="description">描述</label>
+    <textarea id="description" name="description" placeholder="请描述故障现象"></textarea>
+    <button type="submit">提交工单</button>
+  </form>
+</body>
+</html>

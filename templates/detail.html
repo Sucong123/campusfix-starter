@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>工单详情 - CampusFix</title>
+  <style>
+    body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+    .box { border: 1px solid #ddd; border-radius: 8px; padding: 1rem 1.2rem; }
+    .meta { color: #666; font-size: 0.85rem; margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <p><a href="{{ url_for('index') }}">← 返回列表</a></p>
+  <div class="box">
+    <h1>{{ ticket['title'] }}</h1>
+    <div class="meta">位置：{{ ticket['room'] }} · 状态：{{ ticket['status'] }} · 创建：{{ ticket['created_at'] }}</div>
+    <p>{{ ticket['description'] }}</p>
+  </div>
+</body>
+</html>
