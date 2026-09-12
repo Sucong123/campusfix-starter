@@ -1,4 +1,4 @@
-# CampusFix 校园报修工单系统 — 起始项目
+# CampusFix 校园报修工单系统 — 起始项目（A组版）
 
 《基础开发与操作》课程贯穿项目。面向零工程经验学生的 Flask + SQLite 最小 Web 应用，用于练习 Git、协作、测试、CI、Docker 与部署。
 
