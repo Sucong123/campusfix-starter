@@ -5,20 +5,20 @@ __pycache__/
 venv/
 env/
 
-# 环境变量与密钥
+# Environment variables and secrets
 .env
 
-# 数据库（运行时生成）
+# Database (generated at runtime)
 instance/
 *.db
 *.sqlite3
 
-# 测试与工具
+# Tests and tooling
 .pytest_cache/
 .coverage
 htmlcov/
 
-# 系统
+# OS
 .DS_Store
 Thumbs.db
 
