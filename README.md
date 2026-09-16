@@ -1,5 +1,5 @@
 # CampusFix 校园报修工单系统 — 起始项目（A组版·B组版）
-本仓库用于《基础开发与操作》课程项目。
+本仓库用于《基础开发与操作》课程项目等 。
 《基础开发与操作》课程贯穿项目。面向零工程经验学生的 Flask + SQLite 最小 Web 应用，用于练习 Git、协作、测试、CI、Docker 与部署。
 课程学期：2026-2027-1
 ## 功能范围（起始版本）
@@ -23,14 +23,8 @@
 
 ```bash
 python -m venv .venv
-# Windows: .venv\Scripts\activate
-# Ubuntu:  source .venv/bin/activate
-pip install -r requirements.txt
-python init_db.py        # 初始化数据库和演示数据
-python app.py            # 启动 Flask，访问 http://127.0.0.1:5000
-```
-
-## 测试方法
+# Windows: .venv\Scripts\activate  cd C:\Users\23013\Desktop\campusfix-starter
+  
 
 ```bash
 pytest -v
@@ -58,7 +52,8 @@ campusfix-starter/
 ├── schema.sql           # 建表 SQL
 ├── requirements.txt     # 依赖锁定
 ├── .gitignore
-├── .env.example
+├── .env.example+
+
 ├── README.md            # 本文件
 └── tests/
     ├── conftest.py      # pytest fixture（临时数据库）
