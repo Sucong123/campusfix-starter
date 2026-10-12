@@ -2,3 +2,5 @@
 # 让 pytest 能导入项目根目录下的 app.py
 pythonpath = ["."]
 testpaths = ["tests"]
+# 中文参数化测试名直接显示（否则会转义成 正常 这种码点形式），便于课程截图
+disable_test_id_escaping_and_forfeit_all_rights_to_community_support = true
