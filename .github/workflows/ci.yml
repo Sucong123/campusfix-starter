@@ -16,5 +16,9 @@ jobs:
           python-version: '3.13'
       - name: 安装依赖
         run: pip install -r requirements.txt
+      - name: 使用Secret
+        run: echo "token长度=${#TEST_TOKEN}"
+        env:
+          TEST_TOKEN: ${{ secrets.TEST_TOKEN }}
       - name: 跑测试
         run: pytest
