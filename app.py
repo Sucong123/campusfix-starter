@@ -92,4 +92,6 @@ def create_ticket():
 
 if __name__ == "__main__":
     # 仅开发用途；生产部署使用 gunicorn（第11次课）
-    app.run(host="127.0.0.1", port=5000, debug=True)
+    # 本地默认只监听回环；容器里通过 HOST=0.0.0.0 允许端口映射访问
+    host = os.environ.get("HOST", "127.0.0.1")
+    app.run(host=host, port=5000, debug=True)
