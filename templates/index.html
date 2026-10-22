@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <title>CampusFix 校园报修</title>
+  <title>{{ site_title }} 校园报修</title>
   <style>
     body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; color: #222; }
     h1 { font-size: 1.4rem; }
@@ -14,7 +14,7 @@
   </style>
 </head>
 <body>
-  <h1>CampusFix v2（第二组·小组版）</h1>
+  <h1>{{ site_title }}</h1>
   <p><a href="{{ url_for('create_ticket') }}">+ 新建工单</a></p>
   {% if tickets %}
     {% for t in tickets %}
