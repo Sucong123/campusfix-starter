@@ -9,7 +9,7 @@ def test_index(client):
     """首页应返回 200 并含 CampusFix 标题"""
     resp = client.get("/")
     assert resp.status_code == 200
-    assert "CampusFix" in resp.data.decode()
+    assert "CampusFix-20232032" in resp.data.decode()
 
 
 def test_detail(client):

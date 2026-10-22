@@ -10,6 +10,7 @@ from flask import Flask, g, redirect, render_template, request, url_for
 BASE_DIR = Path(__file__).resolve().parent
 INSTANCE_DIR = BASE_DIR / "instance"
 DATABASE = Path(os.environ.get("DATABASE_PATH", INSTANCE_DIR / "campusfix.db"))
+SITE_TITLE = "CampusFix-20232032"
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "dev-only-secret")
@@ -49,7 +50,7 @@ def index():
     tickets = db.execute(
         "SELECT id, title, room, status, created_at FROM tickets ORDER BY created_at DESC"
     ).fetchall()
-    return render_template("index.html", tickets=tickets)
+    return render_template("index.html", tickets=tickets, site_title=SITE_TITLE)
 
 
 @app.route("/tickets/<int:ticket_id>")
